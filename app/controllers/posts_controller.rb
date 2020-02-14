@@ -5,6 +5,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    # set @author so that posts/show.erb can have access 
+    @author = @post.author
   end
 
   def new
