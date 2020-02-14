@@ -1,5 +1,8 @@
-<%= @post.author.name %>
-<%= @post.author.hometown %>
+<!-- Rails assumes that the partial lives in same folder as view calling it -->
+<!--  Tell Rails to go outside the folder by being explicit about -->
+<-- the folder and file name that it should render -->
 
+<%= render 'authors/author' %>
+ 
 <h1><%= @post.title %></h1>
 <p><%= @post.description %></p>
